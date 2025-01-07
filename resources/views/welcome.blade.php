@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Kecamatan di Sulawesi Selatan</title>
+    <title>Homepage</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,13 +16,74 @@
 
     <link rel="stylesheet" href={{asset("css/adminlte.min.css")}}>
 
+    <style>
+        .card-img-top {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            margin: 15px auto;
+            border-radius: 50%;
+        }
 
+        .card {
+            text-align: center;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            width: 250px;
+            margin: 0 auto;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100px;
+        }
+
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 
 <body style="font-family: Poppins;">
 
     @include('components.navbar')
 
+    {{-- Tim Pengembang --}}
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-title">Anggota Kelompok</h2>
+                </div>
+            </div>
+            <div class="row">
+                @foreach ([
+                ['name' => 'Ahmad Huda Salam', 'nim' => '0110221238', 'img' => ''],
+                ['name' => 'Fauzan Rizqi Ardiansyah', 'nim' => '0110221234', 'img' => ''],
+                ['name' => 'Irfan', 'nim' => '0110121138', 'img' => ''],
+                ['name' => 'Muhammad Firdaus', 'nim' => '0110221232', 'img' => '']
+                ] as $member)
+                <div class="col-lg-3 col-md-6 mb-4 d-flex justify-content-center">
+                    <div class="card">
+                        <img src={{asset("img/$member[img]")}} class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-text">{{ $member['name'] }}</h5>
+                            <p class="card-text text-center">{{ $member['nim'] }}</p>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
 
     <!-- jQuery -->
     <script src={{asset("js/jquery.min.js")}}></script>

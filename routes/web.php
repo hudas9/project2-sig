@@ -6,7 +6,7 @@ use App\Http\Controllers\DistrictController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('/regency/map', [RegencyController::class, 'map'])->name('regency.map');
 Route::get('/regency/table', [RegencyController::class, 'table'])->name('regency.table');

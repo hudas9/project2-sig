@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="/" style="font-weight: bold">Sulawesi Selatan</a>
+        <a class="navbar-brand" href="{{ route('home') }}" style="font-weight: bold">Sistem Informasi Geografis
+            SulSel</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -13,8 +14,8 @@
                         Kabupaten/Kota
                     </a>
                     <div class="dropdown-menu" aria-labelledby="kabupatenDropdown">
-                        <a class="dropdown-item" href="/regency/map">Peta Tematik</a>
-                        <a class="dropdown-item" href="/regency/table">Data</a>
+                        <a class="dropdown-item" href="{{ route('regency.map') }}">Peta Tematik</a>
+                        <a class="dropdown-item" href="{{ route('regency.table') }}">Data</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -23,8 +24,8 @@
                         Kecamatan
                     </a>
                     <div class="dropdown-menu" aria-labelledby="kecamatanDropdown">
-                        <a class="dropdown-item" href="/district/map">Peta Tematik</a>
-                        <a class="dropdown-item" href="/district/table">Data</a>
+                        <a class="dropdown-item" href="{{ route('district.map') }}">Peta Tematik</a>
+                        <a class="dropdown-item" href="{{ route('district.table') }}">Data</a>
                     </div>
                 </li>
             </ul>
