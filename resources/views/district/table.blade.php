@@ -22,7 +22,9 @@
 
 <body style="font-family: Poppins;">
 
-    <div class="container py-5">
+    @include('components.navbar')
+
+    <div class="container py-3">
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title" style="font-weight: bold; font-size: 24px;">Kecamatan di Provinsi Sulawesi
@@ -30,7 +32,7 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table id="example1" class="table table-bordered table-striped">
+                    <table id="district-table" class="table table-bordered table-striped">
                         <thead>
                             <tr>
                                 <th>No.</th>
@@ -41,7 +43,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($districts as $district)
+                            @foreach ($districts as $district)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $district->name }}</td>
@@ -76,10 +78,21 @@
 
         <script>
             $(function () {
-                $("#example1").DataTable({
-                    "responsive": false, "lengthChange": false, "autoWidth": false,
-                    "buttons": ["copy", "csv", "excel", "pdf", "print"]
-                    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+                $("#district-table").DataTable(
+                    {
+                        // serverSide: true,
+                        // processing: true,
+                        // ajax: '{{ route('district.table') }}',
+                        // columns: [
+                        //     { data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false },
+                        //     { data: 'name', name: 'name' },
+                        //     { data: 'alt_name', name: 'alt_name', orderable: false },
+                        //     { data: 'latitude', name: 'latitude', orderable: false },
+                        //     { data: 'longitude', name: 'longitude', orderable: false },
+                        // ],
+                        "responsive": false, "lengthChange": false, "autoWidth": false,
+                        "buttons": ["copy", "csv", "excel", "pdf", "print"],
+                    }).buttons().container().appendTo('#district-table_wrapper .col-md-6:eq(0)');
             });
         </script>
 </body>

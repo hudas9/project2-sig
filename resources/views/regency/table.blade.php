@@ -22,7 +22,9 @@
 
 <body style="font-family: Poppins;">
 
-    <div class="container py-5">
+    @include('components.navbar')
+
+    <div class="container py-3">
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title" style="font-weight: bold; font-size: 24px;">Kabupaten/Kota di Provinsi Sulawesi
@@ -46,7 +48,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($regencies as $regency)
+                            @forelse($regencies as $regency)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $regency->name }}</td>
@@ -59,7 +61,11 @@
                                 <td>{{ $regency->unemployment_rate }}</td>
                                 <td>{{ $regency->high_school_count }}</td>
                             </tr>
-                            @endforeach
+                            @empty
+                            <tr>
+                                <td colspan="9" class="text-center">Data tidak ditemukan</td>
+                            </tr>
+                            @endforelse
                         </tbody>
                     </table>
                 </div>

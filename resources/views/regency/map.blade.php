@@ -34,11 +34,19 @@
 </head>
 
 <body style="font-family: Poppins;">
-    <h1 class="text-center mt-3 mb-1">Kabupaten/Kota di Sulawesi Selatan</h1>
+
+    @include('components.navbar')
+
+    <h3 class="text-center mt-3 mb-3">Kabupaten/Kota di Sulawesi Selatan</h3>
 
     <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- jQuery -->
+    <script src={{asset("js/jquery.min.js")}}></script>
+    <!-- Bootstrap 4 -->
+    <script src={{asset("js/bootstrap.bundle.min.js")}}></script>
 
     <script>
         var map = L.map('map').setView([-4.608, 120.697], 7.4);
