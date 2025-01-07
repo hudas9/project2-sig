@@ -66,10 +66,10 @@
             </div>
             <div class="row">
                 @foreach ([
-                ['name' => 'Ahmad Huda Salam', 'nim' => '0110221238', 'img' => ''],
-                ['name' => 'Fauzan Rizqi Ardiansyah', 'nim' => '0110221234', 'img' => ''],
-                ['name' => 'Irfan', 'nim' => '0110121138', 'img' => ''],
-                ['name' => 'Muhammad Firdaus', 'nim' => '0110221232', 'img' => '']
+                ['name' => 'Ahmad Huda Salam', 'nim' => '0110221238', 'img' => 'huda.jpeg'],
+                ['name' => 'Fauzan Rizqi Ardiansyah', 'nim' => '0110221234', 'img' => 'ojan.jpeg'],
+                ['name' => 'Irfan', 'nim' => '0110121138', 'img' => 'irfan.jpeg'],
+                ['name' => 'Muhammad Firdaus', 'nim' => '0110221232', 'img' => 'daus.jpeg']
                 ] as $member)
                 <div class="col-lg-3 col-md-6 mb-4 d-flex justify-content-center">
                     <div class="card">
