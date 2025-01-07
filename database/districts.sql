@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 04, 2025 at 05:52 AM
+-- Generation Time: Jan 07, 2025 at 06:06 AM
 -- Server version: 8.4.3
 -- PHP Version: 8.3.15
 
@@ -20,38 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `project2-sig`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `cache`
---
-
-CREATE TABLE `cache` (
-  `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `expiration` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `cache`
---
-
-INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-('livewire-rate-limiter:a17961fa74e9275d529f489537f179c05d50c2f3', 'i:1;', 1735969671),
-('livewire-rate-limiter:a17961fa74e9275d529f489537f179c05d50c2f3:timer', 'i:1735969671;', 1735969671);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `cache_locks`
---
-
-CREATE TABLE `cache_locks` (
-  `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `owner` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `expiration` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -137,7 +105,6 @@ INSERT INTO `districts` (`id`, `regency_id`, `name`, `alt_name`, `latitude`, `lo
 (7306061, 7306, 'MANUJU', 'Manuju, Gowa Regency, South Sulawesi, Indonesia', -5.28565, 119.68468, NULL, NULL),
 (7306070, 7306, 'TINGGIMONCONG', 'Tinggimoncong, Gowa Regency, South Sulawesi, Indonesia', -5.24891, 119.85838, NULL, NULL),
 (7306071, 7306, 'TOMBOLO PAO', 'Tombolo Pao, Gowa Regency, South Sulawesi, Indonesia', -5.20729, 119.95093, NULL, NULL),
-(7306072, 7306, 'PARIGI', 'Parigi, Masigi, Parigi, Kabupaten Parigi Moutong, Sulawesi Tengah, Indonesia', -0.81918, 120.1673, NULL, NULL),
 (7306080, 7306, 'BUNGAYA', 'Bungaya, Gowa Regency, South Sulawesi, Indonesia', -5.36691, 119.71944, NULL, NULL),
 (7306081, 7306, 'BONTOLEMPANGAN', 'Bontolempangan, Gowa Regency, South Sulawesi, Indonesia', -5.38906, 119.82366, NULL, NULL),
 (7306090, 7306, 'TOMPOBULU', 'Tompobulu, Gowa Regency, South Sulawesi, Indonesia', -5.40504, 119.86995, NULL, NULL),
@@ -150,7 +117,6 @@ INSERT INTO `districts` (`id`, `regency_id`, `name`, `alt_name`, `latitude`, `lo
 (7307060, 7307, 'SINJAI TENGAH', 'Central Sinjai, Sinjai Regency, South Sulawesi, Indonesia', -5.20005, 120.08963, NULL, NULL),
 (7307070, 7307, 'SINJAI UTARA', 'North Sinjai, Sinjai Regency, South Sulawesi, Indonesia', -5.10976, 120.23973, NULL, NULL),
 (7307080, 7307, 'BULUPODDO', 'Bulupoddo, Sinjai Regency, South Sulawesi, Indonesia', -5.08766, 120.13583, NULL, NULL),
-(7307090, 7307, 'PULAU SEMBILAN', 'Sembilan Island, Pangkalan Susu, Langkat Regency, North Sumatra, Indonesia', 4.15408, 98.25959, NULL, NULL),
 (7308010, 7308, 'MANDAI', 'Mandai, Maros Regency, South Sulawesi, Indonesia', -5.07537, 119.56297, NULL, NULL),
 (7308011, 7308, 'MONCONGLOE', 'Moncongloe, Maros Regency, South Sulawesi, Indonesia', -5.14529, 119.54557, NULL, NULL),
 (7308020, 7308, 'MAROS BARU', 'Maros Baru, Maros Regency, South Sulawesi, Indonesia', -4.9981, 119.54557, NULL, NULL),
@@ -163,7 +129,6 @@ INSERT INTO `districts` (`id`, `regency_id`, `name`, `alt_name`, `latitude`, `lo
 (7308050, 7308, 'TANRALILI', 'Tanralili, Maros Regency, South Sulawesi, Indonesia', -5.10495, 119.61514, NULL, NULL),
 (7308051, 7308, 'TOMPU BULU', 'Tompu Bulu, Maros Regency, South Sulawesi, Indonesia', -5.14329, 119.76577, NULL, NULL),
 (7308060, 7308, 'CAMBA', 'Camba, Mario Pulana, Camba, Kabupaten Maros, Sulawesi Selatan, Indonesia', -4.9, 119.83333, NULL, NULL),
-(7308061, 7308, 'CENRANA', 'Cenrana, Tallu Banua, Sendana, Kabupaten Majene, Sulawesi Barat, Indonesia', -3.2867, 118.8612, NULL, NULL),
 (7308070, 7308, 'MALLAWA', 'Mallawa, Maros Regency, South Sulawesi, Indonesia', -4.80674, 119.90466, NULL, NULL),
 (7309010, 7309, 'LIUKANG TANGAYA', 'Liukang Tangaya, Pangkajene Dan Kepulauan Regency, South Sulawesi, Indonesia', -6.85944, 119.11637, NULL, NULL),
 (7309020, 7309, 'LIUKANG KALMAS', 'LIUKANG KALMAS', 0, 0, NULL, NULL),
@@ -175,7 +140,6 @@ INSERT INTO `districts` (`id`, `regency_id`, `name`, `alt_name`, `latitude`, `lo
 (7309051, 7309, 'TONDONG TALLASA', 'Tondong Tallasa, Pangkajene Dan Kepulauan Regency, South Sulawesi, Indonesia', -4.85217, 119.71944, NULL, NULL),
 (7309060, 7309, 'BUNGORO', 'Bungoro, Pangkajene Dan Kepulauan Regency, South Sulawesi, Indonesia', -4.77268, 119.66151, NULL, NULL),
 (7309070, 7309, 'LABAKKANG', 'Labakkang, Pangkajene Dan Kepulauan Regency, South Sulawesi, Indonesia', -4.75986, 119.54557, NULL, NULL),
-(7309080, 7309, 'MARANG', 'Marang, Kec. Pesisir Sel., Kabupaten Lampung Barat, Lampung, Indonesia', -5.37875, 104.058, NULL, NULL),
 (7309091, 7309, 'SEGERI', 'Segeri, Pangkajene Dan Kepulauan Regency, South Sulawesi, Indonesia', -4.66533, 119.61514, NULL, NULL),
 (7309092, 7309, 'MANDALLE', 'Mandalle, Tamarupa, Mandalle, Kabupaten Pangkajene Dan Kepulauan, Sulawesi Selatan, Indonesia', -4.58807, 119.5953, NULL, NULL),
 (7310010, 7310, 'TANETE RIAJA', 'Tanete Riaja, Barru Regency, South Sulawesi, Indonesia', -4.52617, 119.67309, NULL, NULL),
@@ -192,7 +156,6 @@ INSERT INTO `districts` (`id`, `regency_id`, `name`, `alt_name`, `latitude`, `lo
 (7311050, 7311, 'TONRA', 'Tonra, Bone Regency, South Sulawesi, Indonesia', -4.89805, 120.27435, NULL, NULL),
 (7311060, 7311, 'PATIMPENG', 'Patimpeng, Bone Regency, South Sulawesi, Indonesia', -4.90263, 120.18202, NULL, NULL),
 (7311070, 7311, 'LIBURENG', 'Libureng, Samaenre, Tonra, Kabupaten Bone, Sulawesi Selatan, Indonesia', -4.86433, 120.2935, NULL, NULL),
-(7311080, 7311, 'MARE', 'Mare Island, South Tidore, Tidore Kepulauan City, North Maluku, Indonesia', 0.57956, 127.39875, NULL, NULL),
 (7311090, 7311, 'SIBULUE', 'Sibulue, Bone Regency, South Sulawesi, Indonesia', -4.66597, 120.37814, NULL, NULL),
 (7311100, 7311, 'CINA', 'Cina, Bone Regency, South Sulawesi, Indonesia', -4.67996, 120.27435, NULL, NULL),
 (7311110, 7311, 'BAREBBO', 'Barebbo, Bone Regency, South Sulawesi, Indonesia', -4.59574, 120.33202, NULL, NULL),
@@ -208,7 +171,6 @@ INSERT INTO `districts` (`id`, `regency_id`, `name`, `alt_name`, `latitude`, `lo
 (7311200, 7311, 'AMALI', 'Amali, Tacipong, Amali, Kabupaten Bone, Sulawesi Selatan, Indonesia', -4.38333, 120.1, NULL, NULL),
 (7311210, 7311, 'AJANGALE', 'Ajangale, Bone Regency, South Sulawesi, Indonesia', -4.28872, 120.13583, NULL, NULL),
 (7311220, 7311, 'DUA BOCCOE', 'Dua Boccoe, Bone Regency, South Sulawesi, Indonesia', -4.3207, 120.22819, NULL, NULL),
-(7311230, 7311, 'CENRANA', 'Cenrana, Tallu Banua, Sendana, Kabupaten Majene, Sulawesi Barat, Indonesia', -3.2867, 118.8612, NULL, NULL),
 (7311710, 7311, 'TANETE RIATTANG BARAT', 'West Tanete Riattang, Bone Regency, South Sulawesi, Indonesia', -4.52927, 120.30319, NULL, NULL),
 (7311720, 7311, 'TANETE RIATTANG', 'Tanete Riattang, Bone Regency, South Sulawesi, Indonesia', -4.52768, 120.33779, NULL, NULL),
 (7311730, 7311, 'TANETE RIATTANG TIMUR', 'East Tanete Riattang, Bone Regency, South Sulawesi, Indonesia', -4.5585, 120.35508, NULL, NULL),
@@ -223,7 +185,6 @@ INSERT INTO `districts` (`id`, `regency_id`, `name`, `alt_name`, `latitude`, `lo
 (7313010, 7313, 'SABBANG PARU', 'Sabbang Paru, Wajo Regency, South Sulawesi, Indonesia', -4.22264, 119.99718, NULL, NULL),
 (7313020, 7313, 'TEMPE', 'Tempe, Wajo Regency, South Sulawesi, Indonesia', -4.13929, 120.05497, NULL, NULL),
 (7313030, 7313, 'PAMMANA', 'Pammana, Wajo Regency, South Sulawesi, Indonesia', -4.18276, 120.08963, NULL, NULL),
-(7313040, 7313, 'BOLA', 'Bola, Lampanairi, Batauga, Kabupaten Buton, Sulawesi Tenggara, Indonesia', -5.65897, 122.6288, NULL, NULL),
 (7313050, 7313, 'TAKKALALLA', 'Takkalalla, Wajo Regency, South Sulawesi, Indonesia', -4.13909, 120.27435, NULL, NULL),
 (7313060, 7313, 'SAJOANGING', 'Sajoanging, Wajo Regency, South Sulawesi, Indonesia', -3.96865, 120.28588, NULL, NULL),
 (7313061, 7313, 'PENRANG', 'Penrang, Watang Sawitto, Pinrang Regency, South Sulawesi, Indonesia', -3.78926, 119.64267, NULL, NULL),
@@ -239,7 +200,6 @@ INSERT INTO `districts` (`id`, `regency_id`, `name`, `alt_name`, `latitude`, `lo
 (7314030, 7314, 'WATANG PULU', 'Watang Pulu, Sidenreng Rappang Regency, South Sulawesi, Indonesia', -3.94643, 119.71944, NULL, NULL),
 (7314040, 7314, 'BARANTI', 'Baranti, Sidenreng Rappang Regency, South Sulawesi, Indonesia', -3.82777, 119.77735, NULL, NULL),
 (7314050, 7314, 'PANCA RIJANG', 'Panca Rijang, Sidenreng Rappang Regency, South Sulawesi, Indonesia', -3.8383, 119.85259, NULL, NULL),
-(7314051, 7314, 'KULO', 'Kulo, Lelilef Waibulan, Weda Tengah, Kabupaten Halmahera Tengah, Maluku Utara, Indonesia', 0.62384, 127.8062, NULL, NULL),
 (7314060, 7314, 'MARITENGNGAE', 'Maritengngae, Sidenreng Rappang Regency, South Sulawesi, Indonesia', -3.91637, 119.8005, NULL, NULL),
 (7314061, 7314, 'WATANG SIDENRENG', 'Watang Sidenreng, Sidenreng Rappang Regency, South Sulawesi, Indonesia', -3.90516, 119.85838, NULL, NULL),
 (7314070, 7314, 'PITU RIAWA', 'Pitu Riawa, Sidenreng Rappang Regency, South Sulawesi, Indonesia', -3.82069, 119.96249, NULL, NULL),
@@ -256,7 +216,6 @@ INSERT INTO `districts` (`id`, `regency_id`, `name`, `alt_name`, `latitude`, `lo
 (7315060, 7315, 'CEMPA', 'Cempa, Pinrang Regency, South Sulawesi, Indonesia', -3.73681, 119.58036, NULL, NULL),
 (7315070, 7315, 'DUAMPANUA', 'Duampanua, Pinrang Regency, South Sulawesi, Indonesia', -3.64835, 119.55717, NULL, NULL),
 (7315071, 7315, 'BATULAPPA', 'Batulappa, Pinrang Regency, South Sulawesi, Indonesia', -3.59072, 119.67309, NULL, NULL),
-(7315080, 7315, 'LEMBANG', 'Lembang, West Bandung Regency, West Java, Indonesia', -6.81621, 107.6228, NULL, NULL),
 (7316010, 7316, 'MAIWA', 'Maiwa, Bangkala, Maiwa, Kabupaten Enrekang, Sulawesi Selatan, Indonesia', -3.75043, 119.8618, NULL, NULL),
 (7316011, 7316, 'BUNGIN', 'Bungin, Enrekang Regency, South Sulawesi, Indonesia', -3.54364, 119.99718, NULL, NULL),
 (7316020, 7316, 'ENREKANG', 'Enrekang Regency, South Sulawesi, Indonesia', -3.45907, 119.88152, NULL, NULL),
@@ -314,14 +273,11 @@ INSERT INTO `districts` (`id`, `regency_id`, `name`, `alt_name`, `latitude`, `lo
 (7322020, 7322, 'BAEBUNTA', 'Baebunta, North Luwu Regency, South Sulawesi, Indonesia', -2.62395, 120.27435, NULL, NULL),
 (7322030, 7322, 'MALANGKE', 'Malangke, North Luwu Regency, South Sulawesi, Indonesia', -2.75744, 120.45881, NULL, NULL),
 (7322031, 7322, 'MALANGKE BARAT', 'West Malangke, North Luwu Regency, South Sulawesi, Indonesia', -2.83082, 120.32049, NULL, NULL),
-(7322040, 7322, 'SUKAMAJU', 'Sukamaju, Cilodong, Depok City, West Java, Indonesia', -6.41854, 106.85029, NULL, NULL),
-(7322050, 7322, 'BONE-BONE', 'Bone, Matombura, Kec. Bone, Kabupaten Muna, Sulawesi Tenggara, Indonesia', -5.18835, 122.4876, NULL, NULL),
 (7322051, 7322, 'TANA LILI', 'Tana Lili, Kabupaten Luwu Utara, Sulawesi Selatan, Indonesia', -2.6153, 120.59698, NULL, NULL),
 (7322120, 7322, 'MASAMBA', 'Masamba, Mappedeceng, Kabupaten Luwu Utara, Sulawesi Selatan, Indonesia', -2.55136, 120.3697, NULL, NULL),
 (7322121, 7322, 'MAPPEDECENG', 'Mappedeceng, North Luwu Regency, South Sulawesi, Indonesia', -2.5167, 120.41272, NULL, NULL),
 (7322122, 7322, 'RAMPI', 'Rampi, North Luwu Regency, South Sulawesi, Indonesia', -2.15889, 120.29742, NULL, NULL),
 (7322130, 7322, 'LIMBONG', 'Limbong, North Luwu Regency, South Sulawesi, Indonesia', -2.58109, 119.92779, NULL, NULL),
-(7322131, 7322, 'SEKO', 'Seko, Redang Seko, Lirik, Kabupaten Indragiri Hulu, Riau, Indonesia', -0.22477, 102.2166, NULL, NULL),
 (7325010, 7325, 'BURAU', 'Burau, East Luwu Regency, South Sulawesi, Indonesia', -2.54394, 120.68901, NULL, NULL),
 (7325020, 7325, 'WOTU', 'Wotu, Bawalipu, Wotu, Kabupaten Luwu Timur, Sulawesi Selatan, Indonesia', -2.59724, 120.8037, NULL, NULL),
 (7325030, 7325, 'TOMONI', 'Tomoni, East Luwu Regency, South Sulawesi, Indonesia', -2.40884, 120.59698, NULL, NULL),
@@ -342,7 +298,6 @@ INSERT INTO `districts` (`id`, `regency_id`, `name`, `alt_name`, `latitude`, `lo
 (7326070, 7326, 'TONDON', 'Tondon, North Toraja Regency, South Sulawesi, Indonesia', -2.95535, 119.93936, NULL, NULL),
 (7326080, 7326, 'TALLUNGLIPU', 'Tallunglipu, North Toraja Regency, South Sulawesi, Indonesia', -2.95183, 119.91044, NULL, NULL),
 (7326090, 7326, 'RANTEPAO', 'Rantepao, North Toraja Regency, South Sulawesi, Indonesia', -2.97037, 119.87573, NULL, NULL),
-(7326100, 7326, 'TIKALA', 'Tikala, Manado City, North Sulawesi, Indonesia', 1.46674, 124.89, NULL, NULL),
 (7326110, 7326, 'SESEAN', 'Sesean, North Toraja Regency, South Sulawesi, Indonesia', -2.92525, 119.92201, NULL, NULL),
 (7326120, 7326, 'BALUSU', 'Balusu, Barru Regency, South Sulawesi, Indonesia', -4.3448, 119.67309, NULL, NULL),
 (7326130, 7326, 'SADAN', 'Sadan, North Toraja Regency, South Sulawesi, Indonesia', -2.84274, 119.90466, NULL, NULL),
@@ -370,217 +325,16 @@ INSERT INTO `districts` (`id`, `regency_id`, `name`, `alt_name`, `latitude`, `lo
 (7371111, 7371, 'TAMALANREA', 'Tamalanrea, Makassar City, South Sulawesi, Indonesia', -5.09352, 119.47596, NULL, NULL),
 (7372010, 7372, 'BACUKIKI', 'Bacukiki, Pare-Pare City, South Sulawesi, Indonesia', -4.02862, 119.68468, NULL, NULL),
 (7372011, 7372, 'BACUKIKI BARAT', 'West Bacukiki, Pare-Pare City, South Sulawesi, Indonesia', -4.04419, 119.63253, NULL, NULL),
-(7372020, 7372, 'UJUNG', 'Ujung, Semampir, Surabaya City, East Java, Indonesia', -7.20879, 112.74799, NULL, NULL),
-(7372030, 7372, 'SOREANG', 'Soreang, Bandung, West Java, Indonesia', -7.0252, 107.52591, NULL, NULL),
 (7373010, 7373, 'WARA SELATAN', 'South Wara, Palopo City, South Sulawesi, Indonesia', -3.03025, 120.21088, NULL, NULL),
-(7373011, 7373, 'SENDANA', 'Sendana, Leling, Tommo, Kabupaten Mamuju, Sulawesi Barat, Indonesia', -2.23333, 119.46667, NULL, NULL),
-(7373020, 7373, 'WARA', 'Wara, Nunggi, Wera, Bima, Nusa Tenggara Bar., Indonesia', -8.34327, 118.9148, NULL, NULL),
 (7373021, 7373, 'WARA TIMUR', 'East Wara, Palopo City, South Sulawesi, Indonesia', -3.0063, 120.208, NULL, NULL),
 (7373022, 7373, 'MUNGKAJANG', 'Mungkajang, Palopo City, South Sulawesi, Indonesia', -3.02049, 120.10118, NULL, NULL),
 (7373030, 7373, 'WARA UTARA', 'North Wara, Palopo City, South Sulawesi, Indonesia', -2.98725, 120.18779, NULL, NULL),
-(7373031, 7373, 'BARA', 'Bara, Air Buaya, Kabupaten Buru, Maluku, Indonesia', -3.14637, 126.2317, NULL, NULL),
 (7373040, 7373, 'TELLUWANUA', 'Telluwanua, Palopo City, South Sulawesi, Indonesia', -2.91289, 120.19357, NULL, NULL),
 (7373041, 7373, 'WARA BARAT', 'West Wara, Palopo City, South Sulawesi, Indonesia', -2.97711, 120.08963, NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `failed_jobs`
---
-
-CREATE TABLE `failed_jobs` (
-  `id` bigint UNSIGNED NOT NULL,
-  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `jobs`
---
-
-CREATE TABLE `jobs` (
-  `id` bigint UNSIGNED NOT NULL,
-  `queue` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `attempts` tinyint UNSIGNED NOT NULL,
-  `reserved_at` int UNSIGNED DEFAULT NULL,
-  `available_at` int UNSIGNED NOT NULL,
-  `created_at` int UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `job_batches`
---
-
-CREATE TABLE `job_batches` (
-  `id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `total_jobs` int NOT NULL,
-  `pending_jobs` int NOT NULL,
-  `failed_jobs` int NOT NULL,
-  `failed_job_ids` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `options` mediumtext COLLATE utf8mb4_unicode_ci,
-  `cancelled_at` int DEFAULT NULL,
-  `created_at` int NOT NULL,
-  `finished_at` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `migrations`
---
-
-CREATE TABLE `migrations` (
-  `id` int UNSIGNED NOT NULL,
-  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `batch` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `migrations`
---
-
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '0001_01_01_000000_create_users_table', 1),
-(2, '0001_01_01_000001_create_cache_table', 1),
-(3, '0001_01_01_000002_create_jobs_table', 1),
-(4, '2025_01_04_021815_create_regencies_table', 2),
-(5, '2025_01_04_025037_create_districs_table', 2),
-(6, '2025_01_04_054318_create_districts_table', 3);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `password_reset_tokens`
---
-
-CREATE TABLE `password_reset_tokens` (
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `regencies`
---
-
-CREATE TABLE `regencies` (
-  `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `alt_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `latitude` double NOT NULL DEFAULT '0',
-  `longitude` double NOT NULL DEFAULT '0',
-  `population` bigint NOT NULL DEFAULT '0',
-  `area_km2` double NOT NULL DEFAULT '0',
-  `population_density` double NOT NULL DEFAULT '0',
-  `high_school_count` double NOT NULL DEFAULT '0',
-  `unemployment_rate` double NOT NULL DEFAULT '0',
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `regencies`
---
-
-INSERT INTO `regencies` (`id`, `name`, `alt_name`, `latitude`, `longitude`, `population`, `area_km2`, `population_density`, `high_school_count`, `unemployment_rate`, `created_at`, `updated_at`) VALUES
-(7301, 'KABUPATEN KEPULAUAN SELAYAR', 'KABUPATEN KEPULAUAN SELAYAR', -6.81667, 120.8, 142700, 1160.36, 0.123, 11, 2.05, NULL, NULL),
-(7302, 'KABUPATEN BULUKUMBA', 'KABUPATEN BULUKUMBA', -5.41667, 120.23333, 454720, 1175.53, 0.387, 20, 2.23, NULL, NULL),
-(7303, 'KABUPATEN BANTAENG', 'KABUPATEN BANTAENG', -5.48333, 119.98333, 205420, 390.97, 0.525, 7, 2.57, NULL, NULL),
-(7304, 'KABUPATEN JENEPONTO', 'KABUPATEN JENEPONTO', -5.63333, 119.73333, 418970, 796, 0.526, 24, 2.47, NULL, NULL),
-(7305, 'KABUPATEN TAKALAR', 'KABUPATEN TAKALAR', -5.41667, 119.51667, 317020, 555.43, 0.571, 25, 3.84, NULL, NULL),
-(7306, 'KABUPATEN GOWA', 'KABUPATEN GOWA', -5.31667, 119.75, 814040, 1813, 0.449, 50, 3.91, NULL, NULL),
-(7307, 'KABUPATEN SINJAI', 'KABUPATEN SINJAI', -5.21667, 120.15, 270430, 865.24, 0.313, 17, 1.52, NULL, NULL),
-(7308, 'KABUPATEN MAROS', 'KABUPATEN MAROS', -5.05, 119.71667, 413590, 1442.95, 0.287, 34, 4.34, NULL, NULL),
-(7309, 'KABUPATEN PANGKAJENE DAN KEPULAUAN', 'KABUPATEN PANGKAJENE DAN KEPULAUAN', -4.7827, 119.5506, 359160, 888.91, 0.404, 33, 3.99, NULL, NULL),
-(7310, 'KABUPATEN BARRU', 'KABUPATEN BARRU', -4.43333, 119.68333, 189210, 1201.9, 0.157, 8, 6.42, NULL, NULL),
-(7311, 'KABUPATEN BONE', 'KABUPATEN BONE', -4.7, 120.13333, 830120, 4567.36, 0.182, 38, 2.28, NULL, NULL),
-(7312, 'KABUPATEN SOPPENG', 'KABUPATEN SOPPENG', -4.3842, 119.89, 239360, 1385.55, 0.173, 12, 3.33, NULL, NULL),
-(7313, 'KABUPATEN WAJO', 'KABUPATEN WAJO', -4, 120.16667, 389050, 2608.71, 0.149, 19, 2.31, NULL, NULL),
-(7314, 'KABUPATEN SIDENRENG RAPPANG', 'KABUPATEN SIDENRENG RAPPANG', -3.85, 119.96667, 330740, 1832.3, 0.181, 16, 3.02, NULL, NULL),
-(7315, 'KABUPATEN PINRANG', 'KABUPATEN PINRANG', -3.61667, 119.6, 424650, 1896.58, 0.224, 14, 3.12, NULL, NULL),
-(7316, 'KABUPATEN ENREKANG', 'KABUPATEN ENREKANG', -3.5, 119.86667, 238100, 1806.85, 0.132, 18, 1.51, NULL, NULL),
-(7317, 'KABUPATEN LUWU', 'KABUPATEN LUWU', -2.5577, 121.3242, 384280, 2902.07, 0.132, 25, 4.14, NULL, NULL),
-(7318, 'KABUPATEN TANA TORAJA', 'KABUPATEN TANA TORAJA', -3.0024, 119.79655, 292420, 2043.62, 0.143, 18, 3.98, NULL, NULL),
-(7322, 'KABUPATEN LUWU UTARA', 'KABUPATEN LUWU UTARA', -2.6, 120.25, 337660, 7422.42, 0.045, 19, 2.39, NULL, NULL),
-(7325, 'KABUPATEN LUWU TIMUR', 'KABUPATEN LUWU TIMUR', -2.50957, 120.3978, 312730, 6745.92, 0.046, 21, 4.58, NULL, NULL),
-(7326, 'KABUPATEN TORAJA UTARA', 'KABUPATEN TORAJA UTARA', -2.92738, 119.79218, 277790, 1289.13, 0.215, 17, 2.44, NULL, NULL),
-(7371, 'KOTA MAKASSAR', 'KOTA MAKASSAR', -5.15, 119.45, 1464640, 176.85, 8.282, 137, 9.71, NULL, NULL),
-(7372, 'KOTA PARE-PARE', 'KOTA PARE-PARE', -4.03333, 119.65, 160920, 89.67, 1.795, 10, 5.23, NULL, NULL),
-(7373, 'KOTA PALOPO', 'KOTA PALOPO', -2.97841, 120.11078, 195670, 273.24, 0.716, 14, 7.64, NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `sessions`
---
-
-CREATE TABLE `sessions` (
-  `id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_id` bigint UNSIGNED DEFAULT NULL,
-  `ip_address` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `user_agent` text COLLATE utf8mb4_unicode_ci,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `last_activity` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `sessions`
---
-
-INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('tZgq73Q8zuuyDe3ZDSFjCoJkg5YliDbuZdGTECLj', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiQXhCR1dNcmNBeUZ6WDBxaDZjZXVuUXhDbmRxZjkwNjREa2k2T2NtQSI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjM3OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYWRtaW4vcmVnZW5jaWVzIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEyJEJRb3NXV1FTSEs3aG9FT1kuYmEzTk9mS3dac3phNnVQWVkwUUw5Uld1RUs4dC4zTnBZSFpHIjt9', 1735969773);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-CREATE TABLE `users` (
-  `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', 'admin@project.sig', NULL, '$2y$12$BQosWWQSHK7hoEOY.ba3NOfKwZsza6uPYY0QL9RWuEK8t.3NpYHZG', NULL, '2025-01-03 19:13:40', '2025-01-03 19:13:40');
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `cache`
---
-ALTER TABLE `cache`
-  ADD PRIMARY KEY (`key`);
-
---
--- Indexes for table `cache_locks`
---
-ALTER TABLE `cache_locks`
-  ADD PRIMARY KEY (`key`);
 
 --
 -- Indexes for table `districts`
@@ -588,59 +342,6 @@ ALTER TABLE `cache_locks`
 ALTER TABLE `districts`
   ADD PRIMARY KEY (`id`),
   ADD KEY `districts_regency_id_foreign` (`regency_id`);
-
---
--- Indexes for table `failed_jobs`
---
-ALTER TABLE `failed_jobs`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
-
---
--- Indexes for table `jobs`
---
-ALTER TABLE `jobs`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `jobs_queue_index` (`queue`);
-
---
--- Indexes for table `job_batches`
---
-ALTER TABLE `job_batches`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `migrations`
---
-ALTER TABLE `migrations`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `password_reset_tokens`
---
-ALTER TABLE `password_reset_tokens`
-  ADD PRIMARY KEY (`email`);
-
---
--- Indexes for table `regencies`
---
-ALTER TABLE `regencies`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sessions`
---
-ALTER TABLE `sessions`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `sessions_user_id_index` (`user_id`),
-  ADD KEY `sessions_last_activity_index` (`last_activity`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -651,36 +352,6 @@ ALTER TABLE `users`
 --
 ALTER TABLE `districts`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7373042;
-
---
--- AUTO_INCREMENT for table `failed_jobs`
---
-ALTER TABLE `failed_jobs`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `jobs`
---
-ALTER TABLE `jobs`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `migrations`
---
-ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `regencies`
---
-ALTER TABLE `regencies`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7374;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables

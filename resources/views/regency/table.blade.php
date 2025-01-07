@@ -25,7 +25,8 @@
     <div class="container py-5">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title" style="font-weight: bold">Kabupaten/Kota di Provinsi Sulawesi Selatan</h3>
+                <h3 class="card-title" style="font-weight: bold; font-size: 24px;">Kabupaten/Kota di Provinsi Sulawesi
+                    Selatan</h3>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
