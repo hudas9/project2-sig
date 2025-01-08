@@ -18,8 +18,8 @@
 
     <style>
         .card-img-top {
-            width: 120px;
-            height: 120px;
+            width: 130px;
+            height: 130px;
             object-fit: cover;
             margin: 15px auto;
             border-radius: 50%;
@@ -66,21 +66,39 @@
             </div>
             <div class="row">
                 @foreach ([
-                ['name' => 'Ahmad Huda Salam', 'desc' => 'sipaling fullstack', 'img' => 'pp.jpeg'],
-                ['name' => 'Fauzan Rizqi Ardiansyah', 'desc' => 'dikit-dikti chatgpt', 'img' => 'pp.jpeg'],
-                ['name' => 'Irfan', 'desc' => 'push rank sampe subuh', 'img' => 'pp.jpeg'],
-                ['name' => 'Muhammad Firdaus', 'desc' => 'sibuk modif motor', 'img' => 'pp.jpeg']
+                ['name' => 'Ahmad Huda Salam', 'desc' => 'lagi sigma ges', 'img' => 'pp.jpeg'],
+                ['name' => 'Fauzan Rizqi Ardiansyah', 'desc' => 'depok vs everybody', 'img' => 'pp.jpeg'],
+                ['name' => 'Irfan', 'desc' => 'Teruslah Melangkah', 'img' => 'pp.jpeg'],
+                ['name' => 'Muhammad Firdaus', 'desc' => 'info sunmori', 'img' => 'pp.jpeg']
                 ] as $member)
                 <div class="col-lg-3 col-md-6 mb-4 d-flex justify-content-center">
                     <div class="card">
                         <img src={{asset("img/$member[img]")}} class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-text">{{ $member['name'] }}</h5>
-                            <p class="card-text text-center">{{ $member['desc'] }}</p>
+                            <p class="card-text text-center">
+                                <q>{{ $member['desc'] }}</q>
+                            </p>
                         </div>
                     </div>
                 </div>
                 @endforeach
+            </div>
+        </div>
+    </section>
+
+    {{-- Tentang Project --}}
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-title">Tentang Proyek</h2>
+                </div>
+            </div>
+            <div class="row">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aliquid porro corporis quisquam
+                    facere hic. Temporibus blanditiis doloremque voluptatum velit quisquam, voluptatem minus similique
+                    illum, unde asperiores quae hic eveniet.</p>
             </div>
         </div>
     </section>
