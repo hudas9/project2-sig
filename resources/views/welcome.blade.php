@@ -96,9 +96,13 @@
                 </div>
             </div>
             <div class="row">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aliquid porro corporis quisquam
-                    facere hic. Temporibus blanditiis doloremque voluptatum velit quisquam, voluptatem minus similique
-                    illum, unde asperiores quae hic eveniet.</p>
+                <div class="col-lg-12">
+                    <p class="mx-3 mx-md-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque tempora at
+                        est voluptas quasi
+                        ab, ullam suscipit odit quo, qui enim perspiciatis voluptates iste cum repellat, velit mollitia
+                        unde id! Praesentium sequi culpa aperiam dolorem numquam cumque vel delectus magnam a at
+                        assumenda, consequuntur, blanditiis aspernatur adipisci in, facilis accusantium!</p>
+                </div>
             </div>
         </div>
     </section>
