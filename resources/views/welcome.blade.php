@@ -66,7 +66,7 @@
             </div>
             <div class="row">
                 @foreach ([
-                ['name' => 'Ahmad Huda Salam', 'desc' => 'lagi sigma ges', 'img' => 'pp.jpeg'],
+                ['name' => 'Ahmad Huda Salam', 'desc' => 'until now and from now', 'img' => 'pp.jpeg'],
                 ['name' => 'Fauzan Rizqi Ardiansyah', 'desc' => 'depok vs everybody', 'img' => 'pp.jpeg'],
                 ['name' => 'Irfan', 'desc' => 'Teruslah Melangkah', 'img' => 'pp.jpeg'],
                 ['name' => 'Muhammad Firdaus', 'desc' => 'info sunmori', 'img' => 'pp.jpeg']
