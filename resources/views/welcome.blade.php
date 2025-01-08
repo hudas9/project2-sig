@@ -66,17 +66,17 @@
             </div>
             <div class="row">
                 @foreach ([
-                ['name' => 'Ahmad Huda Salam', 'nim' => '0110221238', 'img' => 'huda.jpeg'],
-                ['name' => 'Fauzan Rizqi Ardiansyah', 'nim' => '0110221234', 'img' => 'ojan.jpeg'],
-                ['name' => 'Irfan', 'nim' => '0110121138', 'img' => 'irfan.jpeg'],
-                ['name' => 'Muhammad Firdaus', 'nim' => '0110221232', 'img' => 'daus.jpeg']
+                ['name' => 'Ahmad Huda Salam', 'desc' => 'sipaling fullstack', 'img' => 'pp.jpeg'],
+                ['name' => 'Fauzan Rizqi Ardiansyah', 'desc' => 'dikit-dikti chatgpt', 'img' => 'pp.jpeg'],
+                ['name' => 'Irfan', 'desc' => 'push rank sampe subuh', 'img' => 'pp.jpeg'],
+                ['name' => 'Muhammad Firdaus', 'desc' => 'sibuk modif motor', 'img' => 'pp.jpeg']
                 ] as $member)
                 <div class="col-lg-3 col-md-6 mb-4 d-flex justify-content-center">
                     <div class="card">
                         <img src={{asset("img/$member[img]")}} class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-text">{{ $member['name'] }}</h5>
-                            <p class="card-text text-center">{{ $member['nim'] }}</p>
+                            <p class="card-text text-center">{{ $member['desc'] }}</p>
                         </div>
                     </div>
                 </div>

@@ -22,4 +22,9 @@ class Regency extends Model
     {
         return $this->hasMany(District::class);
     }
+
+    public function regencyPolygon()
+    {
+        return $this->hasOne(RegencyPolygon::class);
+    }
 }
