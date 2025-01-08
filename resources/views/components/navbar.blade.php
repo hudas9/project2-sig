@@ -13,7 +13,7 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Peta tematik
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="kabupatenDropdown">
+                    <div class="dropdown-menu" aria-labelledby="kabupatenDropdown" style="z-index: 1050;">
                         <a class="dropdown-item" href="{{ route('thematic.density') }}">Kepadatan Penduduk</a>
                         <a class="dropdown-item disabled" href="#">Jumlah SMA</a>
                         <a class="dropdown-item disabled" href="#">Populasi</a>
@@ -25,7 +25,7 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Kabupaten/Kota
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="kabupatenDropdown">
+                    <div class="dropdown-menu" aria-labelledby="kabupatenDropdown" style="z-index: 1050;">
                         <a class="dropdown-item" href="{{ route('regency.map') }}">Peta</a>
                         <a class="dropdown-item" href="{{ route('regency.table') }}">Data</a>
                     </div>
@@ -35,7 +35,7 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Kecamatan
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="kecamatanDropdown">
+                    <div class="dropdown-menu" aria-labelledby="kecamatanDropdown" style="z-index: 1050;">
                         <a class="dropdown-item" href="{{ route('district.map') }}">Peta</a>
                         <a class="dropdown-item" href="{{ route('district.table') }}">Data</a>
                     </div>
