@@ -107,6 +107,8 @@
             padding: 20px;
             display: none;
             z-index: 1001;
+            width: 80%;
+            max-width: 500px;
         }
 
         .popup-content h4 {
