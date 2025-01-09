@@ -15,6 +15,8 @@
 
     <link rel="stylesheet" href={{asset("css/adminlte.min.css")}}>
 
+    <script src="https://kit.fontawesome.com/4530e241c6.js" crossorigin="anonymous"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -71,12 +73,90 @@
             opacity: 0.7;
         }
     </style>
+
+    <style>
+        #info-icon {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #007BFF;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        #info-icon i {
+            font-size: 24px;
+        }
+
+        #info-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            display: none;
+            z-index: 1001;
+        }
+
+        .popup-content h4 {
+            margin-top: 0;
+        }
+
+        #close-popup {
+            margin-top: 10px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #close-popup:hover {
+            background: #0056b3;
+        }
+
+        #info-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 1000;
+        }
+    </style>
 </head>
 
 <body style="font-family: Poppins;">
     @include('components.navbar')
 
     <div id='map'></div>
+
+    <div id="info-overlay"></div>
+    <div id="info-icon">
+        <i class="fas fa-info-circle"></i>
+    </div>
+    <div id="info-popup">
+        <div class="popup-content">
+            <h4>Info Halaman</h4>
+            <p>Ini adalah halaman yang menampilkan persentase pengangguran di setiap kabupaten/kota di Sulawesi Selatan.
+            </p>
+            <button id="close-popup">Tutup</button>
+        </div>
+    </div>
 
     <!-- jQuery -->
     <script src={{asset("js/jquery.min.js")}}></script>
@@ -213,7 +293,43 @@
         };
 
         legend.addTo(map);
+    </script>
 
+    <script>
+        document.getElementById('info-icon').addEventListener('click', function() {
+            document.getElementById('info-popup').style.display = 'block';
+        });
+
+        document.getElementById('close-popup').addEventListener('click', function() {
+            document.getElementById('info-popup').style.display = 'none';
+        });
+
+        const infoIcon = document.getElementById('info-icon');
+        const infoPopup = document.getElementById('info-popup');
+        const infoOverlay = document.getElementById('info-overlay');
+        const closePopupButton = document.getElementById('close-popup');
+
+        // Menampilkan pop-up dan overlay saat ikon diklik
+        infoIcon.addEventListener('click', function () {
+            infoPopup.style.display = 'block';
+            infoOverlay.style.display = 'block';
+        });
+
+        // Menyembunyikan pop-up dan overlay saat tombol tutup diklik
+        closePopupButton.addEventListener('click', function () {
+            hidePopup();
+        });
+
+        // Menyembunyikan pop-up dan overlay saat area luar pop-up diklik
+        infoOverlay.addEventListener('click', function () {
+            hidePopup();
+        });
+
+        // Fungsi untuk menyembunyikan pop-up dan overlay
+        function hidePopup() {
+            infoPopup.style.display = 'none';
+            infoOverlay.style.display = 'none';
+        }
     </script>
 </body>
 
