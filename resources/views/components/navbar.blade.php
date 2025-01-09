@@ -15,9 +15,10 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="kabupatenDropdown" style="z-index: 1050;">
                         <a class="dropdown-item" href="{{ route('thematic.density') }}">Kepadatan Penduduk</a>
-                        <a class="dropdown-item" href="#">Jumlah SMA</a>
-                        <a class="dropdown-item" href="#">Populasi</a>
-                        <a class="dropdown-item" href="#">Persentase Pengangguran</a>
+                        <a class="dropdown-item" href={{ route('thematic.highSchoolCount') }}>Jumlah SMA</a>
+                        <a class="dropdown-item" href={{ route('thematic.population') }}>Populasi</a>
+                        <a class="dropdown-item" href={{ route('thematic.unemploymentRate') }}>Persentase
+                            Pengangguran</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
