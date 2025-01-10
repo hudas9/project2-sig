@@ -71,6 +71,9 @@
                 </div>
             </div>
         </div>
+    </div>
+
+        @include('components.footer')
 
         <!-- jQuery -->
         <script src={{asset("js/jquery.min.js")}}></script>

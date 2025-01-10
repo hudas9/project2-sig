@@ -57,27 +57,30 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- jQuery -->
-        <script src={{asset("js/jquery.min.js")}}></script>
-        <!-- Bootstrap 4 -->
-        <script src={{asset("js/bootstrap.bundle.min.js")}}></script>
-        <!-- DataTables  & Plugins -->
-        <script src={{asset("js/jquery.dataTables.min.js")}}></script>
-        <script src={{asset("js/dataTables.bootstrap4.min.js")}}></script>
-        <script src={{asset("js/dataTables.responsive.min.js")}}></script>
-        <script src={{asset("js/responsive.bootstrap4.min.js")}}></script>
-        <script src={{asset("js/dataTables.buttons.min.js")}}></script>
-        <script src={{asset("js/buttons.bootstrap4.min.js")}}></script>
-        <script src={{asset("js/jszip.min.js")}}></script>
-        <script src={{asset("js/pdfmake.min.js")}}></script>
-        <script src={{asset("js/vfs_fonts.js")}}></script>
-        <script src={{asset("js/buttons.html5.min.js")}}></script>
-        <script src={{asset("js/buttons.print.min.js")}}></script>
-        <script src={{asset("js/buttons.colVis.min.js")}}></script>
+    @include('components.footer')
 
-        <script>
-            $(function () {
+    <!-- jQuery -->
+    <script src={{asset("js/jquery.min.js")}}></script>
+    <!-- Bootstrap 4 -->
+    <script src={{asset("js/bootstrap.bundle.min.js")}}></script>
+    <!-- DataTables  & Plugins -->
+    <script src={{asset("js/jquery.dataTables.min.js")}}></script>
+    <script src={{asset("js/dataTables.bootstrap4.min.js")}}></script>
+    <script src={{asset("js/dataTables.responsive.min.js")}}></script>
+    <script src={{asset("js/responsive.bootstrap4.min.js")}}></script>
+    <script src={{asset("js/dataTables.buttons.min.js")}}></script>
+    <script src={{asset("js/buttons.bootstrap4.min.js")}}></script>
+    <script src={{asset("js/jszip.min.js")}}></script>
+    <script src={{asset("js/pdfmake.min.js")}}></script>
+    <script src={{asset("js/vfs_fonts.js")}}></script>
+    <script src={{asset("js/buttons.html5.min.js")}}></script>
+    <script src={{asset("js/buttons.print.min.js")}}></script>
+    <script src={{asset("js/buttons.colVis.min.js")}}></script>
+
+    <script>
+        $(function () {
                 $("#district-table").DataTable(
                     {
                         // serverSide: true,
@@ -94,7 +97,7 @@
                         "buttons": ["copy", "csv", "excel", "pdf", "print"],
                     }).buttons().container().appendTo('#district-table_wrapper .col-md-6:eq(0)');
             });
-        </script>
+    </script>
 </body>
 
 </html>

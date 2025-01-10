@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
         <a class="navbar-brand" href="{{ route('home') }}" style="font-weight: bold">SIG SulSel
         </a>
@@ -14,7 +14,7 @@
                         Peta tematik
                     </a>
                     <div class="dropdown-menu" aria-labelledby="kabupatenDropdown" style="z-index: 1050;">
-                        <a class="dropdown-item" href="{{ route('thematic.density') }}">Kepadatan Penduduk</a>
+                        <a class="dropdown-item" href={{ route('thematic.density') }}>Kepadatan Penduduk</a>
                         <a class="dropdown-item" href={{ route('thematic.highSchoolCount') }}>Jumlah SMA</a>
                         <a class="dropdown-item" href={{ route('thematic.population') }}>Populasi</a>
                         <a class="dropdown-item" href={{ route('thematic.unemploymentRate') }}>Persentase

@@ -116,7 +116,6 @@
         }
 
         #close-popup {
-            margin-top: 10px;
             background: #007BFF;
             color: white;
             border: none;

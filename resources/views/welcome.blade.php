@@ -56,6 +56,31 @@
 
     @include('components.navbar')
 
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 d-flex justify-content-center">
+                    <img src={{asset("img/sulsel.png")}} alt="Sulsel" class="img-fluid d-none d-lg-block"
+                        style="border-radius: 30px;">
+                </div>
+                <div class="col-lg-7 text-center">
+                    <h2 class="section-title mt-lg-5 mb-0">Tentang Aplikasi</h2>
+                    <p class="p-4 text-left text-center text-lg-left">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Cum
+                        minima natus
+                        labore vitae dolor inventore dicta quis exercitationem, atque voluptatibus! Eligendi modi
+                        temporibus ex non eaque numquam odit quasi hic facilis? Adipisci cupiditate quam aperiam, unde
+                        modi nemo laudantium animi nam! Excepturi commodi, autem dolore tenetur necessitatibus ipsum
+                        dignissimos quisquam itaque reprehenderit doloribus. Corrupti explicabo eos, architecto ipsum
+                        esse voluptatibus hic quidem nisi accusamus maiores corporis provident amet molestias quibusdam
+                        eum facilis molestiae, adipisci sapiente nostrum aliquid cumque ullam quas! Molestias, quod
+                        culpa. Illum dolorum temporibus distinctio officiis, eius molestias tempore et, at rerum iste
+                        natus laborum odit alias itaque?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     {{-- Tim Pengembang --}}
     <section class="bg-light py-5">
         <div class="container">
@@ -66,18 +91,26 @@
             </div>
             <div class="row">
                 @foreach ([
-                ['name' => 'Ahmad Huda Salam', 'desc' => 'until now and from now', 'img' => 'pp.jpeg'],
-                ['name' => 'Fauzan Rizqi Ardiansyah', 'desc' => 'depok vs everybody', 'img' => 'pp.jpeg'],
-                ['name' => 'Irfan', 'desc' => 'Teruslah Melangkah', 'img' => 'pp.jpeg'],
-                ['name' => 'Muhammad Firdaus', 'desc' => 'info sunmori', 'img' => 'pp.jpeg']
+                ['name' => 'Ahmad Huda Salam', 'role' => 'Fullstack Developer', 'img' => 'huda.jpeg', 'social' =>
+                'https://www.github.com/hudas9'],
+                ['name' => 'Fauzan Rizqi Ardiansyah', 'role' => 'Data Engineer', 'img' => 'fauzan.jpeg', 'social' =>
+                'https://www.linkedin.com/in/fauzan-rizqi-ardiansyah'],
+                ['name' => 'Irfan', 'role' => 'Frontend Developer', 'img' => 'irfan.jpeg', 'social' =>
+                ''],
+                ['name' => 'Muhammad Firdaus', 'role' => 'UI/UX Designer', 'img' => 'pp.jpeg', 'social' =>
+                ''],
                 ] as $member)
                 <div class="col-lg-3 col-md-6 mb-4 d-flex justify-content-center">
                     <div class="card">
-                        <img src={{asset("img/$member[img]")}} class="card-img-top" alt="...">
+                        <a href={{$member['social']}} target="_blank" class="text-dark">
+                            <img src={{asset("img/$member[img]")}} class="card-img-top" alt="...">
+                        </a>
                         <div class="card-body">
-                            <h5 class="card-text">{{ $member['name'] }}</h5>
+                            <a href={{$member['social']}} target="_blank" class="text-dark">
+                                <h5 class="card-text">{{ $member['name'] }}</h5>
+                            </a>
                             <p class="card-text text-center">
-                                <q>{{ $member['desc'] }}</q>
+                                {{ $member['role'] }}
                             </p>
                         </div>
                     </div>
@@ -87,25 +120,7 @@
         </div>
     </section>
 
-    {{-- Tentang Project --}}
-    <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-title">Tentang Proyek</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="mx-3 mx-md-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque tempora at
-                        est voluptas quasi
-                        ab, ullam suscipit odit quo, qui enim perspiciatis voluptates iste cum repellat, velit mollitia
-                        unde id! Praesentium sequi culpa aperiam dolorem numquam cumque vel delectus magnam a at
-                        assumenda, consequuntur, blanditiis aspernatur adipisci in, facilis accusantium!</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('components.footer')
 
     <!-- jQuery -->
     <script src={{asset("js/jquery.min.js")}}></script>
