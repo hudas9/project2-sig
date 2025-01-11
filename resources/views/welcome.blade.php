@@ -92,13 +92,13 @@
             <div class="row">
                 @foreach ([
                 ['name' => 'Ahmad Huda Salam', 'role' => 'Fullstack Developer', 'img' => 'huda.jpeg', 'social' =>
-                'https://www.github.com/hudas9'],
+                'https://www.linkedin.com/in/ahmadhudasalam'],
                 ['name' => 'Fauzan Rizqi Ardiansyah', 'role' => 'Data Engineer', 'img' => 'fauzan.jpeg', 'social' =>
                 'https://www.linkedin.com/in/fauzan-rizqi-ardiansyah'],
                 ['name' => 'Irfan', 'role' => 'Frontend Developer', 'img' => 'irfan.jpeg', 'social' =>
-                ''],
+                'https://www.linkedin.com/in/irfan-z'],
                 ['name' => 'Muhammad Firdaus', 'role' => 'UI/UX Designer', 'img' => 'pp.jpeg', 'social' =>
-                ''],
+                'https://www.tiktok.com/@useee31_'],
                 ] as $member)
                 <div class="col-lg-3 col-md-6 mb-4 d-flex justify-content-center">
                     <div class="card">

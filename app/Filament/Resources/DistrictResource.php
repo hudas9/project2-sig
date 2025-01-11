@@ -23,9 +23,11 @@ class DistrictResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('regency_id')
-                    ->required()
-                    ->numeric(),
+                Forms\Components\Select::make('regency_id')
+                    ->label('Regency')
+                    ->relationship('regency', 'name')
+                    ->searchable()
+                    ->required(),
                 Forms\Components\TextInput::make('name')
                     ->required()
                     ->maxLength(255),
@@ -42,6 +44,7 @@ class DistrictResource extends Resource
                     ->default(0),
             ]);
     }
+
 
     public static function table(Table $table): Table
     {
