@@ -63,19 +63,15 @@
                     <img src={{asset("img/sulsel.png")}} alt="Sulsel" class="img-fluid d-none d-lg-block"
                         style="border-radius: 30px;">
                 </div>
-                <div class="col-lg-7 text-center">
-                    <h2 class="section-title mt-lg-5 mb-0">Tentang Aplikasi</h2>
-                    <p class="p-4 text-left text-center text-lg-left">Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Cum
-                        minima natus
-                        labore vitae dolor inventore dicta quis exercitationem, atque voluptatibus! Eligendi modi
-                        temporibus ex non eaque numquam odit quasi hic facilis? Adipisci cupiditate quam aperiam, unde
-                        modi nemo laudantium animi nam! Excepturi commodi, autem dolore tenetur necessitatibus ipsum
-                        dignissimos quisquam itaque reprehenderit doloribus. Corrupti explicabo eos, architecto ipsum
-                        esse voluptatibus hic quidem nisi accusamus maiores corporis provident amet molestias quibusdam
-                        eum facilis molestiae, adipisci sapiente nostrum aliquid cumque ullam quas! Molestias, quod
-                        culpa. Illum dolorum temporibus distinctio officiis, eius molestias tempore et, at rerum iste
-                        natus laborum odit alias itaque?</p>
+                <div class="col-lg-7 text-center justify-content-center d-flex flex-column">
+                    <h2 class="section-title mb-0">Tentang Aplikasi</h2>
+                    <p class="p-4 text-left text-center text-lg-left">SIG SulSel adalah aplikasi berbasis web yang
+                        digunakan untuk memetakan data geografis Kabupaten/Kota dan Kecamatan di provinsi Sulawesi
+                        Selatan.
+                        Aplikasi ini memudahkan pengguna
+                        untuk melihat data geografis dalam tampilan peta dan tabel baik berupa data spasial dan non
+                        spasial seperti populasi, luas, kepadatan, jumlah SMA, dan persentase pengangguran di
+                        Kabupaten/Kota dan kecamatan yang ada di provinsi Sulawesi Selatan secara interaktif.</p>
                 </div>
             </div>
         </div>
@@ -97,8 +93,8 @@
                 'https://www.linkedin.com/in/fauzan-rizqi-ardiansyah'],
                 ['name' => 'Irfan', 'role' => 'Frontend Developer', 'img' => 'irfan.jpeg', 'social' =>
                 'https://www.linkedin.com/in/irfan-z'],
-                ['name' => 'Muhammad Firdaus', 'role' => 'UI/UX Designer', 'img' => 'pp.jpeg', 'social' =>
-                'https://www.tiktok.com/@useee31_'],
+                ['name' => 'Muhammad Firdaus', 'role' => 'UI/UX Designer', 'img' => 'daus.jpeg', 'social' =>
+                'https://www.linkedin.com/in/muhammad-firdaus-2b2703227/'],
                 ] as $member)
                 <div class="col-lg-3 col-md-6 mb-4 d-flex justify-content-center">
                     <div class="card">
