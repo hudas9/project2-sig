@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="{{ route('home') }}" style="font-weight: bold">SIG SulSel
+        <a class="navbar-brand" href="{{ route('home') }}" style="font-weight: bold">
+            <img src="{{ asset('img/sulsel.svg') }}" alt="SulSel" style="height: 35px; margin: auto 5px 0;">
+            SIG SulSel
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
