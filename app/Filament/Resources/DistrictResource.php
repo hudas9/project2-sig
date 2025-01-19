@@ -26,7 +26,6 @@ class DistrictResource extends Resource
                 Forms\Components\Select::make('regency_id')
                     ->label('Regency')
                     ->relationship('regency', 'name')
-                    ->searchable()
                     ->required(),
                 Forms\Components\TextInput::make('name')
                     ->required()
